@@ -1,13 +1,13 @@
 use std::sync::LazyLock;
 
 use anyhow::Result;
+use base::BaseAI;
 use openai::chat::{ChatCompletionMessage, ChatCompletionMessageRole};
 use rust_dotenv::dotenv::DotEnv;
-use writer::BaseAI;
 
 pub static ENV: LazyLock<DotEnv> = LazyLock::new(|| DotEnv::new(""));
 
-mod writer;
+mod base;
 
 #[tokio::main]
 async fn main() -> Result<()> {
