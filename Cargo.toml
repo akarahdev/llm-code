@@ -4,3 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+anyhow = "1.0.97"
+openai = "1.0.0"
+rust_dotenv = "0.1.2"
+tokio = { version = "1.43.0", features = ["full"] }
